@@ -21,7 +21,7 @@ export const TrustBenefits: React.FC = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-4">
+    <section className="hidden md:block max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-4">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4">
         {benefits.map((item, index) => {
           const Icon = item.icon;

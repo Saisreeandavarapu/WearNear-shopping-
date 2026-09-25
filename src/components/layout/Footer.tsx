@@ -53,12 +53,15 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 py-8 sm:py-12">
           {/* Brand Info */}
           <div className="sm:col-span-2 space-y-2.5 sm:space-y-3">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-3">
               <img
                 src="/image.png"
                 alt="WearNear - Your Style. Your Neighborhood."
-                className="h-8 sm:h-10 w-auto object-contain"
+                className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain shrink-0 rounded-2xl drop-shadow-md"
               />
+              <span className="font-editorial font-bold text-2xl sm:text-3xl text-[#191919] tracking-tight leading-none">
+                WearNear
+              </span>
             </div>
             <p className="text-xs text-[#686868] leading-relaxed max-w-sm font-normal">
               WearNear connects you with nearby fashion boutiques and stores. Discover curated looks, try them on at home, and receive local deliveries in 30-45 minutes.

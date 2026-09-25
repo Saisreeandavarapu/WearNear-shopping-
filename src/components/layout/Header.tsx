@@ -98,24 +98,23 @@ export const Header: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-6 lg:px-8">
         <div
-          className={`flex items-center justify-between transition-all duration-300 gap-1 xs:gap-2 sm:gap-6 ${
-            isScrolled ? 'h-[54px] sm:h-16 py-1 sm:py-0' : 'h-[62px] sm:h-18 lg:h-20 py-1.5 sm:py-0'
-          }`}
+          className={`flex items-center justify-between transition-all duration-300 gap-1 xs:gap-2 sm:gap-6 ${isScrolled ? 'h-[58px] sm:h-18 py-1 sm:py-0' : 'h-[68px] sm:h-20 lg:h-22 py-1.5 sm:py-0'
+            }`}
         >
           {/* Left: Brand Logo & Tagline */}
           <div className="flex items-center gap-1.5 sm:gap-4 shrink-0 min-w-0">
             <Link
               to="/"
-              className="flex items-center gap-1.5 sm:gap-2 shrink-0"
+              className="flex items-center gap-2 sm:gap-2.5 shrink-0"
               aria-label="WearNear Home"
             >
               <img
                 src="/image.png"
                 alt="WearNear"
-                className="h-8 w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-auto object-contain rounded-full shrink-0"
+                className="h-12 w-12 xs:h-13 xs:w-13 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain rounded-full shrink-0 shadow-sm"
               />
 
-              <span className="sm:hidden font-editorial font-bold text-[16px] xs:text-[18px] tracking-tight text-[#172B82] leading-none whitespace-nowrap">
+              <span className="font-editorial font-bold text-[14px] xs:text-[21px] sm:text-[16px] tracking-tight text-[#172B82] leading-none whitespace-nowrap">
                 WearNear
               </span>
             </Link>
@@ -125,22 +124,20 @@ export const Header: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setGenderMode('women')}
-                className={`px-3 py-1 rounded transition-all duration-200 cursor-pointer ${
-                  genderMode === 'women'
-                    ? 'bg-[#243FBA] text-white shadow-subtle'
-                    : 'text-[#686868] hover:text-[#191919]'
-                }`}
+                className={`px-3 py-1 rounded transition-all duration-200 cursor-pointer ${genderMode === 'women'
+                  ? 'bg-[#243FBA] text-white shadow-subtle'
+                  : 'text-[#686868] hover:text-[#191919]'
+                  }`}
               >
                 WOMEN
               </button>
               <button
                 type="button"
                 onClick={() => setGenderMode('men')}
-                className={`px-3 py-1 rounded transition-all duration-200 cursor-pointer ${
-                  genderMode === 'men'
-                    ? 'bg-[#243FBA] text-white shadow-subtle'
-                    : 'text-[#686868] hover:text-[#191919]'
-                }`}
+                className={`px-3 py-1 rounded transition-all duration-200 cursor-pointer ${genderMode === 'men'
+                  ? 'bg-[#243FBA] text-white shadow-subtle'
+                  : 'text-[#686868] hover:text-[#191919]'
+                  }`}
               >
                 MEN
               </button>

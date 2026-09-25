@@ -19,8 +19,8 @@ export const MobileBottomNav: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#FFFCF5]/98 backdrop-blur-lg border-t border-[#DDD7CA] md:hidden pb-safe shadow-lg select-none">
-      <div className="flex items-center justify-around h-13 sm:h-14 px-1">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#172B82]/95 backdrop-blur-xl border-t border-white/15 md:hidden pb-safe shadow-[0_-4px_24px_rgba(23,43,130,0.35)] select-none">
+      <div className="flex items-center justify-around h-14 px-1.5">
         {navItems.map((item) => {
           const Icon = item.icon;
           return (
@@ -29,37 +29,43 @@ export const MobileBottomNav: React.FC = () => {
               to={item.path}
               end={item.path === '/'}
               className={({ isActive }) =>
-                `flex flex-col items-center justify-center flex-1 h-full py-0.5 text-xs font-semibold relative transition-all active:scale-90 ${
-                  isActive ? 'text-[#243FBA] font-bold' : 'text-[#686868] hover:text-[#191919]'
+                `flex flex-col items-center justify-center flex-1 h-full py-1 text-xs font-semibold relative transition-all active:scale-95 ${
+                  isActive ? 'text-white' : 'text-white/70 hover:text-white'
                 }`
               }
             >
               {({ isActive }) => (
-                <>
+                <div
+                  className={`flex flex-col items-center justify-center w-full py-1 px-1 rounded-xl transition-all duration-200 ${
+                    isActive ? 'bg-white/12' : ''
+                  }`}
+                >
                   <div className="relative flex items-center justify-center">
                     <Icon
-                      className={`w-4.5 h-4.5 sm:w-5 sm:h-5 transition-transform duration-200 ${
-                        isActive ? 'text-[#243FBA] scale-110' : 'text-[#686868]'
+                      className={`w-5 h-5 transition-transform duration-200 ${
+                        isActive
+                          ? 'text-white scale-110 drop-shadow-[0_1px_4px_rgba(255,255,255,0.4)]'
+                          : 'text-white/70'
                       }`}
-                      strokeWidth={isActive ? 2.3 : 1.75}
+                      strokeWidth={isActive ? 2.3 : 1.8}
                     />
                     {typeof item.badge === 'number' && item.badge > 0 && (
-                      <span className="absolute -top-1.5 -right-2.5 bg-[#243FBA] text-white text-[8px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center shadow-sm">
+                      <span className="absolute -top-1.5 -right-2.5 bg-white text-[#172B82] text-[8px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center shadow-sm">
                         {item.badge}
                       </span>
                     )}
                   </div>
                   <span
                     className={`text-[9.5px] mt-0.5 tracking-tight ${
-                      isActive ? 'text-[#243FBA] font-bold' : 'text-[#686868]'
+                      isActive ? 'text-white font-bold' : 'text-white/70'
                     }`}
                   >
                     {item.name}
                   </span>
                   {isActive && (
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#243FBA] absolute bottom-0.5 shadow-[0_0_6px_rgba(36,63,186,0.6)]" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-white absolute bottom-1 shadow-[0_0_8px_rgba(255,255,255,0.9)]" />
                   )}
-                </>
+                </div>
               )}
             </NavLink>
           );

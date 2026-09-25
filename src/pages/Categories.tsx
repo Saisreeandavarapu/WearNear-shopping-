@@ -66,8 +66,8 @@ export const Categories: React.FC = () => {
                 className="group relative flex flex-col items-center justify-center p-2.5 sm:p-5 rounded-xl sm:rounded-2xl bg-brand-card sm:hover:bg-brand-blue border border-brand-border sm:hover:border-brand-blue text-brand-text sm:hover:text-white transition-all duration-300 shadow-subtle sm:hover:shadow-card active:scale-[0.97] cursor-pointer select-none"
               >
                 {/* Icon Container */}
-                <div className="w-9 h-9 sm:w-14 sm:h-14 rounded-lg sm:rounded-2xl bg-brand-cream/80 sm:group-hover:bg-white/20 text-brand-text sm:group-hover:text-white flex items-center justify-center transition-all duration-300 border border-brand-border/60 sm:group-hover:border-transparent mb-1.5 sm:mb-3 shadow-inner">
-                  <Icon className="w-4 h-4 sm:w-7 sm:h-7 transition-transform duration-300 sm:group-hover:scale-110" strokeWidth={1.8} />
+                <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-brand-cream/80 sm:group-hover:bg-white/20 text-brand-text sm:group-hover:text-white flex items-center justify-center transition-all duration-300 border border-brand-border/60 sm:group-hover:border-transparent mb-1.5 sm:mb-2.5 shadow-inner">
+                  <Icon className="w-3.5 h-3.5 sm:w-5 sm:h-5 transition-transform duration-300 sm:group-hover:scale-110" strokeWidth={1.8} />
                 </div>
 
                 <h3 className="font-bold text-[11px] sm:text-sm tracking-tight text-center text-brand-text sm:group-hover:text-white transition-colors">
